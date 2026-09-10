@@ -23,8 +23,10 @@ a:hover{color:#A855F7}
 </helmet>
 <x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
 
-<section data-label="Portada" data-screen-label="01" data-speaker-notes="&quot;Todos están hablando de lo que la IA puede hacer. Nosotros vamos a mostrarte lo que TÚ puedes hacer con ella.&quot; [pausa. que respire.] &quot;Bienvenidos a BubbleMesh. El estudio de los Imposibles.&quot;" style="display:flex;background:radial-gradient(ellipse 70% 60% at 70% 30%,rgba(124,58,237,.28),transparent 70%),#0B0F1A;color:#fff;font-family:Inter,sans-serif;overflow:hidden">
-  <div style="flex:0 0 52%;display:flex;flex-direction:column;padding:96px 0 72px 112px">
+<section data-label="Portada" data-screen-label="01" data-speaker-notes="&quot;Todos están hablando de lo que la IA puede hacer. Nosotros vamos a mostrarte lo que TÚ puedes hacer con ella.&quot; [pausa. que respire.] &quot;Bienvenidos a BubbleMesh. El estudio de los Imposibles.&quot;" style="position:relative;display:flex;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;overflow:hidden">
+  <div onClick="{{ openPortada }}" role="button" tabIndex="0" style="position:absolute;inset:0;cursor:zoom-in"><image-slot id="portada-campana" shape="rect" fit="cover" src="assets/campana-portada.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Portada de campaña — arrastra una imagen"></image-slot></div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(6,9,17,.95) 0%,rgba(6,9,17,.9) 30%,rgba(6,9,17,.62) 48%,rgba(6,9,17,.24) 70%,rgba(6,9,17,.32) 100%)"></div>
+  <div style="position:relative;flex:0 0 52%;display:flex;flex-direction:column;padding:96px 0 72px 112px">
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Deck de presentación · 2026</div>
     <div style="margin-top:auto;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">
       <span style="color:#fff">Bubble</span><span style="background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Mesh</span>
@@ -38,10 +40,9 @@ a:hover{color:#A855F7}
       </div>
     </sc-if>
   </div>
-  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative">
-    <div onClick="{{ openPortada }}" role="button" tabIndex="0" style="position:relative;width:760px;height:570px;cursor:zoom-in;border-radius:20px;overflow:hidden;border:1px solid rgba(168,85,247,.28);box-shadow:0 0 90px rgba(168,85,247,.35)"><image-slot id="portada-campana" shape="rect" fit="cover" src="assets/campana-portada.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Portada de campaña — arrastra una imagen"></image-slot></div>
+  <div style="position:relative;flex:1;display:flex;align-items:flex-end;justify-content:flex-end;padding:0 112px 72px 0">
     <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-      <div style="position:absolute;right:112px;bottom:72px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Portada de campaña · <span style="color:#A855F7">Ampliar ⤢</span></div>
+      <div onClick="{{ openPortada }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,240,.92);cursor:pointer;background:rgba(6,9,17,.62);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:14px 26px" style-hover="color:#fff">Pieza · Portada de campaña · <span style="color:#A855F7">Ampliar ⤢</span></div>
     </sc-if>
   </div>
 </section>
@@ -155,19 +156,14 @@ a:hover{color:#A855F7}
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 1 · Motor de alcance</div>
   </div>
   <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Lo imposible</div>
-  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px">
     <div style="display:flex;flex-direction:column">
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">¿Qué es tan grande que un equipo de seis no debería poder lograrlo… y lo logramos de todos modos?</div>
       <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">48 horas para convertir un mariachi en una experiencia cinematográfica</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">$0 vs $1,000,000: lo que costaría y lo que costó de verdad</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Una universidad completa en 60 segundos, un solo día de rodaje</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">1 persona vs. una productora entera: mismo comercial, mismo brief</div>
-      </div>
-    
-      <div style="margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Concepto de imagen</div>
-        <div style="font-family:Inter,sans-serif;font-size:24px;line-height:1.45;color:rgba(226,232,240,.78)">Un reloj de arena gigante hecho de luz, a punto de vaciarse. En la arena que cae se ve una escena imposible tomando forma.</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">48 horas para convertir un mariachi en una experiencia cinematográfica</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">$0 vs $1,000,000: lo que costaría y lo que costó de verdad</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una universidad completa en 60 segundos, un solo día de rodaje</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">1 persona vs. una productora entera: mismo comercial, mismo brief</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
@@ -180,12 +176,6 @@ a:hover{color:#A855F7}
           <div onClick="{{ openP1 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#A855F7;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
         </div>
       </div>
-      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
-        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic dramatic shot, a giant glowing hourglass made of golden light particles, the falling sand transforming mid-air into a miniature impossible scene (a house, a stage, a cityscape emerging from the grains), dark moody background, epic scale, hyperrealistic, 4K</div>
-        </div>
-      </sc-if>
     </div>
   </div>
 </section>
@@ -196,19 +186,14 @@ a:hover{color:#A855F7}
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 2 · Raíz y amplificación</div>
   </div>
   <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Cultura × Futuro</div>
-  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px">
     <div style="display:flex;flex-direction:column">
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">No reemplazamos el arte con IA. Le damos superpoderes a quienes ya crean cultura.</div>
       <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Los murales de una universidad cobrando vida</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Una bailaora de flamenco bailando junto a su abuela de 1950</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Una cumbia que suena en cinco ciudades al mismo tiempo</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El mismo imposible, contado por cinco culturas distintas</div>
-      </div>
-    
-      <div style="margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#EC4899">Concepto de imagen</div>
-        <div style="font-family:Inter,sans-serif;font-size:24px;line-height:1.45;color:rgba(226,232,240,.78)">Un mural: de un lado pintura clásica estática, del otro la misma escena cobrando vida en movimiento y luz, saliendo de la pared.</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Los murales de una universidad cobrando vida</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una bailaora de flamenco bailando junto a su abuela de 1950</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una cumbia que suena en cinco ciudades al mismo tiempo</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El mismo imposible, contado por cinco culturas distintas</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
@@ -221,12 +206,6 @@ a:hover{color:#A855F7}
           <div onClick="{{ openP2 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#EC4899;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
         </div>
       </div>
-      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
-        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic wide shot of a traditional painted mural on a brick wall, the left half static classical paint, the right half of the same scene coming alive with movement, light, and depth as if breaking through the wall into reality, warm golden lighting transitioning to vivid color, hyperrealistic, 4K</div>
-        </div>
-      </sc-if>
     </div>
   </div>
 </section>
@@ -237,19 +216,14 @@ a:hover{color:#A855F7}
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 3 · El protagonista</div>
   </div>
   <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Humanos × IA</div>
-  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px">
     <div style="display:flex;flex-direction:column">
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">El protagonista nunca es la herramienta. Siempre es la persona.</div>
       <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Un fotógrafo hace solo el trabajo de un estudio completo</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Un arquitecto camina por la casa que aún no ha construido</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Un vendedor de jardinería se convierte en superhéroe de su propia historia</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El making-of de alguien viendo su propio resultado por primera vez, sin guion</div>
-      </div>
-    
-      <div style="margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Concepto de imagen</div>
-        <div style="font-family:Inter,sans-serif;font-size:24px;line-height:1.45;color:rgba(226,232,240,.78)">Retrato de estudio, cálido e íntimo. Manos con callos, mirada cansada pero orgullosa, sosteniendo algo que brilla y que antes no podía crear.</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un fotógrafo hace solo el trabajo de un estudio completo</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un arquitecto camina por la casa que aún no ha construido</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un vendedor de jardinería se convierte en superhéroe de su propia historia</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El making-of de alguien viendo su propio resultado por primera vez, sin guion</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
@@ -262,12 +236,6 @@ a:hover{color:#A855F7}
           <div onClick="{{ openP3 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#A855F7;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
         </div>
       </div>
-      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
-        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Intimate cinematic studio portrait, a real working-class person with authentic weathered hands and a proud tired expression, holding a small glowing object they just created with both hands, warm Rembrandt lighting, shallow depth of field, dark neutral background, hyperrealistic, 4K</div>
-        </div>
-      </sc-if>
     </div>
   </div>
 </section>
@@ -278,19 +246,14 @@ a:hover{color:#A855F7}
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 4 · Honestidad como autoridad</div>
   </div>
   <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Detrás de lo imposible</div>
-  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px">
     <div style="display:flex;flex-direction:column">
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">Mostramos los prompts, los errores y las cuarenta versiones que no sirvieron antes de la que sí.</div>
       <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Los 3 prompts que funcionaron (y los 40 que no)</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Cuánto costó de verdad, en horas y créditos</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1)">Lo que la IA no pudo hacer, y cómo lo resolvió una persona</div>
-        <div style="padding:12px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">Bubble reacciona a los comentarios más incrédulos</div>
-      </div>
-    
-      <div style="margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:#FBBF24">Concepto de imagen</div>
-        <div style="font-family:Inter,sans-serif;font-size:24px;line-height:1.45;color:rgba(226,232,240,.78)">Una mesa de trabajo real y desordenada: notas, pantallas con prompts, cables, café a medias. En medio del caos, el objeto imposible ya terminado.</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Los 3 prompts que funcionaron (y los 40 que no)</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Cuánto costó de verdad, en horas y créditos</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Lo que la IA no pudo hacer, y cómo lo resolvió una persona</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">Bubble reacciona a los comentarios más incrédulos</div>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
@@ -303,12 +266,6 @@ a:hover{color:#A855F7}
           <div onClick="{{ openP4 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#FBBF24;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
         </div>
       </div>
-      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
-        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic overhead shot of a messy authentic creative workspace, sticky notes, screens with code and text prompts, half-empty coffee cups, tangled cables, and in the center a small glowing finished impossible object as the calm result of the chaos, warm desk lamp lighting, hyperrealistic, 4K</div>
-        </div>
-      </sc-if>
     </div>
   </div>
 </section>
@@ -456,6 +413,8 @@ class Component extends DCLogic {
       pieceNames: this.props.pieceNames ?? true,
 
       isZoomed: !!this.state.zoomSrc,
+      // Fondo CSS en vez de <img src>: el placeholder sin hidratar hacia que
+      // el navegador pidiera la ruta literal y soltara un 404 en cada carga.
       zoomBg: this.state.zoomSrc ? 'url("' + this.state.zoomSrc + '")' : 'none',
       zoomRatio: String(this.state.zoomRatio),
       zoomLabel: this.state.zoomLabel,
