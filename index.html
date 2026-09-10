@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>El estudio de los Imposibles · BubbleMesh</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#060911}
+a{color:#EC4899;text-decoration:none}
+a:hover{color:#A855F7}
+::selection{background:rgba(168,85,247,.35)}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Portada" data-screen-label="01" data-speaker-notes="&quot;Todos están hablando de lo que la IA puede hacer. Nosotros vamos a mostrarte lo que TÚ puedes hacer con ella.&quot; [pausa. que respire.] &quot;Bienvenidos a BubbleMesh. El estudio de los Imposibles.&quot;" style="display:flex;background:radial-gradient(ellipse 70% 60% at 70% 30%,rgba(124,58,237,.28),transparent 70%),#0B0F1A;color:#fff;font-family:Inter,sans-serif;overflow:hidden">
+  <div style="flex:0 0 52%;display:flex;flex-direction:column;padding:96px 0 72px 112px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Deck de presentación · 2026</div>
+    <div style="margin-top:auto;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">
+      <span style="color:#fff">Bubble</span><span style="background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Mesh</span>
+    </div>
+    <div style="margin-top:28px;font-family:Montserrat,sans-serif;font-weight:700;font-size:52px;line-height:1.1;color:#E2E8F0;max-width:15ch">El estudio de los Imposibles</div>
+    <div style="margin-top:36px;font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#94A3B8;max-width:34ch">Convertir la estrategia en un tráiler, no en un reporte.</div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:auto;background:rgba(255,255,255,.03);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:26px 30px;max-width:760px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt · El Origen del Imposible</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.5;color:rgba(226,232,240,.82)">Cinematic wide shot, a single silhouetted person standing with arms raised, controlling a massive explosion of golden particles that form fragments of a city skyline, a mural, and musical instruments mid-transformation, dramatic volumetric lighting, epic scale, dark background, hyperrealistic, 4K, movie poster composition</div>
+      </div>
+    </sc-if>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative">
+    <img src="assets/bubble-3d.png" alt="Burbuja 3D BubbleMesh" style="width:660px;height:660px;object-fit:contain;filter:drop-shadow(0 0 90px rgba(168,85,247,.45))">
+    <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute;right:112px;bottom:72px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Origen del Imposible</div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="El problema" data-screen-label="02" data-speaker-notes="&quot;Aquí está el problema. Cada marca de tecnología te dice 'mira lo inteligente que es nuestra IA'. Aburrido. Frío. Amenazante.&quot; &quot;Nadie está mostrando lo que pasa cuando una persona normal, con una idea loca, se sube a esa ola. Nosotros sí.&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">02 · La tensión que abre la historia</div>
+  <div style="margin-top:20px;font-family:Montserrat,sans-serif;font-weight:800;font-size:72px;line-height:1.05">El problema</div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:20px;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(30,41,59,.9),transparent 70%),rgba(255,255,255,.02);padding:44px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8">Izquierda · frío</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15;color:#E2E8F0">Una pantalla gris, llena de código, sin nadie alrededor</div>
+      <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#94A3B8">Aburrido. Frío. Amenazante.</div>
+    </div>
+    <div style="border:1px solid rgba(168,85,247,.28);border-radius:20px;background:radial-gradient(ellipse 80% 70% at 70% 15%,rgba(236,72,153,.22),transparent 70%),rgba(255,255,255,.03);padding:44px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Derecha · vivo</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15;color:#fff">Una persona real riendo, sosteniendo algo imposible que acaba de crear</div>
+      <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Nadie lo está mostrando. Nosotros sí.</div>
+    </div>
+  </div>
+  <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#EC4899">Lo que NO somos</div>
+      <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
+        <div>Una demo de producto con voz robótica</div>
+        <div>Un feed de tutoriales de prompts</div>
+        <div>Una consultora que solo habla de eficiencia</div>
+      </div>
+    </div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt · Frío vs. Vivo</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Split-screen cinematic composition, left side cold blue-toned server room with empty chair and glowing code on screen, right side warm golden-toned scene of a joyful person laughing while holding a glowing impossible object they just created, strong contrast between cold and warm lighting, hyperrealistic, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="La idea central" data-screen-label="03" data-speaker-notes="&quot;La IA no reemplaza. Potencia.&quot; &quot;No estamos aquí para reemplazar al mariachi, al arquitecto, al muralista. Estamos aquí para que hagan cosas que antes solo podían soñar.&quot; &quot;Eso se llama humano aumentado. Y es la historia que vamos a contar, una y otra vez.&quot;" style="display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse 60% 70% at 50% 0%,rgba(124,58,237,.22),transparent 70%),#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">03 · La idea central</div>
+  <div style="margin-top:44px;font-family:Montserrat,sans-serif;font-weight:800;font-size:132px;line-height:.98">
+    La IA no reemplaza.<br><span style="background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Potencia.</span>
+  </div>
+  <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-family:Inter,sans-serif;font-size:32px;line-height:1.45;color:#E2E8F0">No reemplazamos al mariachi, al arquitecto, al muralista. Hacemos que hagan cosas que antes solo podían soñar.</div>
+      <div style="align-self:flex-start;font-family:Inter,sans-serif;font-weight:700;font-size:24px;letter-spacing:.05em;text-transform:uppercase;padding:10px 22px;border-radius:9999px;background:rgba(124,58,237,.15);border:1px solid rgba(168,85,247,.3);color:#A855F7">Humano aumentado</div>
+    </div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt · Alas Prestadas</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic hyperrealistic portrait, an ordinary person standing confidently with arms outstretched, glowing particle wings made of light and data streams extending from their back, golden hour lighting, shallow depth of field, sense of empowerment and wonder, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Alas Prestadas</div>
+  </sc-if>
+</section>
+
+<section data-label="La regla de oro" data-screen-label="04" data-speaker-notes="&quot;Antes de publicar cualquier cosa, nos hacemos una sola pregunta:&quot; &quot;¿Alguien va a ver esto y pensar '¿cómo carajos hicieron eso?'&quot; &quot;Si la respuesta es sí, se publica. Si es no, no existe.&quot;" style="display:flex;flex-direction:column;background:linear-gradient(135deg,#6D28D9 0%,#A855F7 45%,#EC4899 100%);color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)">04 · La regla de oro</div>
+  <div style="margin-top:auto;font-family:Montserrat,sans-serif;font-weight:800;font-size:124px;line-height:.98;max-width:24ch">¿Cómo carajos hicieron eso?</div>
+  <div style="margin-top:40px;font-family:Inter,sans-serif;font-weight:600;font-size:36px;color:rgba(255,255,255,.9)">Si la respuesta es sí, se publica. Si es no, no existe.</div>
+  <div style="margin-top:auto;padding-top:48px;display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start;border-top:1px solid rgba(255,255,255,.3)">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)">Ejemplos que pasan el filtro</div>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;font-family:Inter,sans-serif;font-size:28px;color:#fff">
+        <div>Un mariachi convertido en película en 48 horas</div>
+        <div>Una casa que aún no existe, caminable en video</div>
+        <div>Una ofrenda de Día de Muertos que crece frente a tus ojos</div>
+      </div>
+    </div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(11,15,26,.4);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#fff">Prompt · ¿Cómo Hicieron Eso?</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(255,255,255,.9)">Cinematic crowd shot from a low angle, dozens of diverse faces looking up in genuine awe and disbelief, mouths slightly open, dramatic uplighting from an unseen glowing source off-frame, shallow depth of field on foreground faces, hyperrealistic, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="Bubble, el cómplice" data-screen-label="05" data-speaker-notes="&quot;Y quien propone la locura no somos nosotros. Es Bubble.&quot; &quot;Bubble representa a la IA, pero no la fría, no la amenazante. La curiosa. La que se equivoca. La que te reta a hacer algo ridículo y luego te ayuda a lograrlo.&quot; &quot;Bubble imagina lo imposible. Los humanos lo hacen realidad.&quot;" style="display:flex;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;overflow:hidden">
+  <div style="flex:0 0 45%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(236,72,153,.22),transparent 70%)">
+    <img src="assets/bubble-3d.png" alt="Bubble" style="width:560px;height:560px;object-fit:contain;filter:drop-shadow(0 0 80px rgba(168,85,247,.5))">
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:88px 112px 64px 0">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">05 · El cómplice</div>
+    <div style="margin-top:20px;font-family:Montserrat,sans-serif;font-weight:800;font-size:80px;line-height:1.02">Bubble</div>
+    <div style="margin-top:32px;font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;line-height:1.15;color:#E2E8F0;max-width:24ch">Bubble imagina lo imposible. Los humanos lo hacen realidad.</div>
+    <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:12px">
+      <div style="font-family:Inter,sans-serif;font-weight:700;font-size:24px;letter-spacing:.05em;text-transform:uppercase;padding:10px 20px;border-radius:9999px;background:rgba(124,58,237,.15);border:1px solid rgba(168,85,247,.3);color:#A855F7">Curiosa</div>
+      <div style="font-family:Inter,sans-serif;font-weight:700;font-size:24px;letter-spacing:.05em;text-transform:uppercase;padding:10px 20px;border-radius:9999px;background:rgba(124,58,237,.15);border:1px solid rgba(168,85,247,.3);color:#A855F7">Se equivoca</div>
+      <div style="font-family:Inter,sans-serif;font-weight:700;font-size:24px;letter-spacing:.05em;text-transform:uppercase;padding:10px 20px;border-radius:9999px;background:rgba(124,58,237,.15);border:1px solid rgba(168,85,247,.3);color:#A855F7">Te reta</div>
+    </div>
+    <div style="margin-top:36px;font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#94A3B8;max-width:44ch">Una burbuja traslúcida flotando junto a la oreja de una persona, susurrándole una idea traviesa. Mitad nervios, mitad emoción.</div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:auto;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt · La Idea Traviesa</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic close-up, a playful translucent glass-like bubble with soft internal glowing light floating near a person's ear as if whispering an idea, the person's expression a mix of nervous excitement and mischief, warm rim lighting, dreamlike but hyperrealistic textures, 4K</div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Idea Traviesa</div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="Pilar 1 · Lo imposible" data-screen-label="06" data-speaker-notes="&quot;Este es nuestro motor de alcance. La pregunta no es '¿qué podemos hacer con IA?'. Es '¿qué es tan grande que un equipo de seis no debería poder lograrlo... y lo logramos de todos modos?'&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="display:flex;align-items:baseline;gap:28px">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:44px;background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">01</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 1 · Motor de alcance</div>
+  </div>
+  <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Lo imposible</div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">¿Qué es tan grande que un equipo de seis no debería poder lograrlo… y lo logramos de todos modos?</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">48 horas para convertir un mariachi en una experiencia cinematográfica</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">$0 vs $1,000,000: lo que costaría y lo que costó de verdad</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una universidad completa en 60 segundos, un solo día de rodaje</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">1 persona vs. una productora entera: mismo comercial, mismo brief</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
+      <div style="flex:1;min-height:0;border:1px solid rgba(168,85,247,.2);border-radius:20px;background:radial-gradient(ellipse 70% 70% at 35% 20%,rgba(124,58,237,.24),transparent 70%),rgba(255,255,255,.03);padding:40px;display:flex;flex-direction:column;justify-content:flex-end;gap:16px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Concepto de imagen</div>
+        <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Un reloj de arena gigante hecho de luz, a punto de vaciarse. En la arena que cae se ve una escena imposible tomando forma.</div>
+        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Cuenta Regresiva</div>
+        </sc-if>
+      </div>
+      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic dramatic shot, a giant glowing hourglass made of golden light particles, the falling sand transforming mid-air into a miniature impossible scene (a house, a stage, a cityscape emerging from the grains), dark moody background, epic scale, hyperrealistic, 4K</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-label="Pilar 2 · Cultura × Futuro" data-screen-label="07" data-speaker-notes="&quot;No reemplazamos el arte con IA. Le damos superpoderes a quienes ya crean cultura.&quot; &quot;México es la base. El mundo hispano nos amplifica. Y el mundo entero es el destino, un imposible a la vez.&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="display:flex;align-items:baseline;gap:28px">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:44px;background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">02</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 2 · Raíz y amplificación</div>
+  </div>
+  <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Cultura × Futuro</div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">No reemplazamos el arte con IA. Le damos superpoderes a quienes ya crean cultura.</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Los murales de una universidad cobrando vida</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una bailaora de flamenco bailando junto a su abuela de 1950</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Una cumbia que suena en cinco ciudades al mismo tiempo</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El mismo imposible, contado por cinco culturas distintas</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
+      <div style="flex:1;min-height:0;border:1px solid rgba(236,72,153,.22);border-radius:20px;background:radial-gradient(ellipse 70% 70% at 65% 20%,rgba(236,72,153,.2),transparent 70%),rgba(255,255,255,.03);padding:40px;display:flex;flex-direction:column;justify-content:flex-end;gap:16px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#EC4899">Concepto de imagen</div>
+        <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Un mural: de un lado pintura clásica estática, del otro la misma escena cobrando vida en movimiento y luz, saliendo de la pared.</div>
+        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Mural que Despierta</div>
+        </sc-if>
+      </div>
+      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic wide shot of a traditional painted mural on a brick wall, the left half static classical paint, the right half of the same scene coming alive with movement, light, and depth as if breaking through the wall into reality, warm golden lighting transitioning to vivid color, hyperrealistic, 4K</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-label="Pilar 3 · Humanos × IA" data-screen-label="08" data-speaker-notes="&quot;No: 'mira lo que hizo esta IA'. Sí: 'mira lo que ESTA PERSONA logró hacer gracias a la IA'.&quot; &quot;El protagonista nunca es la herramienta. Siempre es la persona.&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="display:flex;align-items:baseline;gap:28px">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:44px;background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">03</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 3 · El protagonista</div>
+  </div>
+  <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Humanos × IA</div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">El protagonista nunca es la herramienta. Siempre es la persona.</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un fotógrafo hace solo el trabajo de un estudio completo</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un arquitecto camina por la casa que aún no ha construido</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Un vendedor de jardinería se convierte en superhéroe de su propia historia</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">El making-of de alguien viendo su propio resultado por primera vez, sin guion</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
+      <div style="flex:1;min-height:0;border:1px solid rgba(168,85,247,.2);border-radius:20px;background:radial-gradient(ellipse 60% 60% at 50% 35%,rgba(251,191,36,.14),transparent 70%),rgba(255,255,255,.03);padding:40px;display:flex;flex-direction:column;justify-content:flex-end;gap:16px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Concepto de imagen</div>
+        <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Retrato de estudio, cálido e íntimo. Manos con callos, mirada cansada pero orgullosa, sosteniendo algo que brilla y que antes no podía crear.</div>
+        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Manos que Ahora Pueden</div>
+        </sc-if>
+      </div>
+      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Intimate cinematic studio portrait, a real working-class person with authentic weathered hands and a proud tired expression, holding a small glowing object they just created with both hands, warm Rembrandt lighting, shallow depth of field, dark neutral background, hyperrealistic, 4K</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-label="Pilar 4 · Detrás de lo imposible" data-screen-label="09" data-speaker-notes="&quot;Después del espectáculo viene la honestidad. Mostramos los prompts. Los errores. Las cuarenta versiones que no sirvieron antes de la que sí.&quot; &quot;Eso hace dos cosas: prueba que hay humanos detrás, y convierte lo espectacular en autoridad.&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="display:flex;align-items:baseline;gap:28px">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:44px;background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">04</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">Pilar 4 · Honestidad como autoridad</div>
+  </div>
+  <div style="margin-top:16px;font-family:Montserrat,sans-serif;font-weight:800;font-size:96px;line-height:1">Detrás de lo imposible</div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:38px;line-height:1.2;color:#E2E8F0;max-width:26ch">Mostramos los prompts, los errores y las cuarenta versiones que no sirvieron antes de la que sí.</div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Los 3 prompts que funcionaron (y los 40 que no)</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Cuánto costó de verdad, en horas y créditos</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">Lo que la IA no pudo hacer, y cómo lo resolvió una persona</div>
+        <div style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)">Bubble reacciona a los comentarios más incrédulos</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
+      <div style="flex:1;min-height:0;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:radial-gradient(ellipse 60% 60% at 50% 60%,rgba(251,191,36,.12),transparent 70%),rgba(255,255,255,.03);padding:40px;display:flex;flex-direction:column;justify-content:flex-end;gap:16px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#FBBF24">Concepto de imagen</div>
+        <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Una mesa de trabajo real y desordenada: notas, pantallas con prompts, cables, café a medias. En medio del caos, el objeto imposible ya terminado.</div>
+        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Desorden que Vale la Pena</div>
+        </sc-if>
+      </div>
+      <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic overhead shot of a messy authentic creative workspace, sticky notes, screens with code and text prompts, half-empty coffee cups, tangled cables, and in the center a small glowing finished impossible object as the calm result of the chaos, warm desk lamp lighting, hyperrealistic, 4K</div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-label="Los anillos" data-screen-label="10" data-speaker-notes="&quot;No vamos a abrir una oficina en cada país. Vamos a hacer lo que ya funcionó antes: el mismo video, que se entiende sin necesitar traducción.&quot; &quot;México produce. El mundo hispano amplifica. Y el mundo entero llega, un imposible a la vez.&quot;" style="display:flex;flex-direction:column;background:radial-gradient(ellipse 50% 60% at 78% 55%,rgba(124,58,237,.22),transparent 70%),#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">10 · Cómo llegamos al mundo</div>
+  <div style="margin-top:20px;font-family:Montserrat,sans-serif;font-weight:800;font-size:80px;line-height:1.02">Los anillos</div>
+  <div style="margin-top:44px;flex:1;min-height:0;display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;align-items:baseline;gap:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1)">
+        <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:36px;color:#EC4899;min-width:2ch">01</div>
+        <div>
+          <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;color:#fff">México produce</div>
+          <div style="margin-top:8px;font-family:Inter,sans-serif;font-size:28px;color:#94A3B8">La base. Aquí se hace el imposible.</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1)">
+        <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:36px;color:#A855F7;min-width:2ch">02</div>
+        <div>
+          <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;color:#fff">El mundo hispano amplifica</div>
+          <div style="margin-top:8px;font-family:Inter,sans-serif;font-size:28px;color:#94A3B8">Latinoamérica y España, sin traducción.</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:24px">
+        <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:36px;color:#7C3AED;min-width:2ch">03</div>
+        <div>
+          <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;color:#fff">El mundo entero llega</div>
+          <div style="margin-top:8px;font-family:Inter,sans-serif;font-size:28px;color:#94A3B8">Un imposible a la vez.</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center">
+      <div style="width:520px;height:520px;border-radius:50%;border:1px solid rgba(124,58,237,.35);display:flex;align-items:center;justify-content:center">
+        <div style="width:340px;height:340px;border-radius:50%;border:1px solid rgba(168,85,247,.45);display:flex;align-items:center;justify-content:center">
+          <div style="width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#EC4899,#7C3AED);box-shadow:0 0 60px rgba(236,72,153,.45);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;color:#fff">MX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:36px;display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start">
+    <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Onda que Cruza el Mundo</div>
+    </sc-if>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic top-down shot of a glowing stone dropping into dark water, the expanding ripples transforming into illuminated world map contours, Mexico glowing brightest at the center, concentric rings of light spreading outward across continents, deep blue water, hyperrealistic, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="El elenco" data-screen-label="11" data-speaker-notes="&quot;Esto no lo hacemos solos. Tenemos un elenco que ninguna otra empresa de IA en México tiene: creadores universitarios, puertas a instituciones, arquitectura de alto nivel y hasta un apellido que el mundo entero reconoce.&quot; &quot;Cada uno de ellos no es un contacto en una lista. Es parte de la historia.&quot;" style="display:flex;flex-direction:column;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">11 · Nuestra red</div>
+  <div style="margin-top:20px;display:flex;align-items:flex-end;justify-content:space-between;gap:56px">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:80px;line-height:1.02">El elenco</div>
+    <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#94A3B8;max-width:38ch">Cada uno no es un contacto en una lista. Es parte de la historia.</div>
+  </div>
+  <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+    <div style="border:1px solid rgba(168,85,247,.2);border-radius:20px;background:rgba(124,58,237,.08);padding:40px 36px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;color:#A855F7">01</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15">Creadores universitarios</div>
+      <div style="font-family:Inter,sans-serif;font-size:26px;line-height:1.5;color:#94A3B8">Audiencia y talento que ya crea cultura.</div>
+    </div>
+    <div style="border:1px solid rgba(168,85,247,.2);border-radius:20px;background:rgba(124,58,237,.08);padding:40px 36px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;color:#A855F7">02</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15">Puertas a instituciones</div>
+      <div style="font-family:Inter,sans-serif;font-size:26px;line-height:1.5;color:#94A3B8">Acceso donde normalmente no se entra.</div>
+    </div>
+    <div style="border:1px solid rgba(168,85,247,.2);border-radius:20px;background:rgba(124,58,237,.08);padding:40px 36px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;color:#A855F7">03</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15">Arquitectura de alto nivel</div>
+      <div style="font-family:Inter,sans-serif;font-size:26px;line-height:1.5;color:#94A3B8">Proyectos reales que se pueden caminar antes de existir.</div>
+    </div>
+    <div style="border:1px solid rgba(236,72,153,.3);border-radius:20px;background:rgba(236,72,153,.1);padding:40px 36px;display:flex;flex-direction:column;gap:20px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;color:#EC4899">04</div>
+      <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15">Un apellido que el mundo reconoce</div>
+      <div style="font-family:Inter,sans-serif;font-size:26px;line-height:1.5;color:#E2E8F0">Guardián de la cultura dentro del elenco.</div>
+    </div>
+  </div>
+  <div style="margin-top:36px;display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start">
+    <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Constelación</div>
+    </sc-if>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic overhead shot of a round table with silhouettes of diverse people (a content creator, an architect, a scholar, a cultural figure) connected by glowing golden threads of light converging on a bright sphere in the center of the table, dark room, dramatic top lighting, hyperrealistic, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-label="Cierre" data-screen-label="12" data-speaker-notes="&quot;No sabemos exactamente qué vamos a hacer después. Pero tú vas a querer verlo.&quot; &quot;Así que déjame preguntarte lo mismo que le preguntamos a Bubble cada mes:&quot; [pausa larga] &quot;¿Cuál es tu imposible?&quot;" style="display:flex;flex-direction:column;background:radial-gradient(ellipse 55% 65% at 50% 45%,rgba(236,72,153,.22),transparent 70%),#060911;color:#fff;font-family:Inter,sans-serif;padding:88px 112px 64px;overflow:hidden">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">12 · La invitación</div>
+  <div style="margin-top:auto;font-family:Inter,sans-serif;font-size:32px;color:#94A3B8">No sabemos exactamente qué vamos a hacer después. Pero tú vas a querer verlo.</div>
+  <div style="margin-top:32px;font-family:Montserrat,sans-serif;font-weight:800;font-size:150px;line-height:.96">
+    <span style="background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">¿Cuál es tu imposible?</span>
+  </div>
+  <div style="margin-top:auto;padding-top:48px;display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:end;border-top:1px solid rgba(255,255,255,.1)">
+    <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:44px">
+      <span style="color:#fff">Bubble</span><span style="background:linear-gradient(90deg,#A855F7,#EC4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Mesh</span>
+      <div style="margin-top:10px;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8">El estudio de los Imposibles</div>
+    </div>
+    <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Prompt · La Puerta Abierta</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.45;color:rgba(226,232,240,.82)">Cinematic dramatic shot, a single open door standing alone in darkness, blinding warm golden light and abstract swirling particles pouring through the doorway from the other side, no defined shapes visible beyond the light, sense of infinite possibility, hyperrealistic, 4K</div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPrompts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Producción&quot;},&quot;pieceNames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Producción&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showPrompts: this.props.showPrompts ?? true,
+      pieceNames: this.props.pieceNames ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
