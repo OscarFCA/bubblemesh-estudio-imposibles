@@ -46,24 +46,18 @@ a:hover{color:#A855F7}
   <div style="margin-top:20px;font-family:Montserrat,sans-serif;font-weight:800;font-size:72px;line-height:1.05">El problema</div>
   <div style="margin-top:48px;flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:40px">
     <div style="border:1px solid rgba(255,255,255,.1);border-radius:20px;background:radial-gradient(ellipse 80% 60% at 20% 10%,rgba(30,41,59,.9),transparent 70%),rgba(255,255,255,.02);padding:44px;display:flex;flex-direction:column;gap:20px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8">Izquierda · frío</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8">Lo que no hacemos</div>
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15;color:#E2E8F0">Una pantalla gris, llena de código, sin nadie alrededor</div>
       <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#94A3B8">Aburrido. Frío. Amenazante.</div>
+      <div onClick="{{ openProblemaNo }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;margin-top:4px;cursor:zoom-in;border-radius:14px;overflow:hidden"><image-slot id="problema-no" shape="rect" fit="contain" src="assets/problema-no.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Imagen — arrastra aquí"></image-slot></div>
+      <div onClick="{{ openProblemaNo }}" role="button" tabIndex="0" style="flex:none;align-self:flex-end;font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#94A3B8;cursor:pointer" style-hover="color:#fff">Ampliar ⤢</div>
     </div>
     <div style="border:1px solid rgba(168,85,247,.28);border-radius:20px;background:radial-gradient(ellipse 80% 70% at 70% 15%,rgba(236,72,153,.22),transparent 70%),rgba(255,255,255,.03);padding:44px;display:flex;flex-direction:column;gap:20px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Derecha · vivo</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#A855F7">Lo que sí somos</div>
       <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:40px;line-height:1.15;color:#fff">Una persona real riendo, sosteniendo algo imposible que acaba de crear</div>
       <div style="font-family:Inter,sans-serif;font-size:28px;line-height:1.5;color:#E2E8F0">Nadie lo está mostrando. Nosotros sí.</div>
-    </div>
-  </div>
-  <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
-    <div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:#EC4899">Lo que NO somos</div>
-      <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px;font-family:Inter,sans-serif;font-size:28px;color:#E2E8F0">
-        <div>Una demo de producto con voz robótica</div>
-        <div>Un feed de tutoriales de prompts</div>
-        <div>Una consultora que solo habla de eficiencia</div>
-      </div>
+      <div onClick="{{ openProblemaSi }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;margin-top:4px;cursor:zoom-in;border-radius:14px;overflow:hidden"><image-slot id="problema-si" shape="rect" fit="contain" src="assets/problema-si.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Imagen — arrastra aquí"></image-slot></div>
+      <div onClick="{{ openProblemaSi }}" role="button" tabIndex="0" style="flex:none;align-self:flex-end;font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#A855F7;cursor:pointer" style-hover="color:#fff">Ampliar ⤢</div>
     </div>
   </div>
 </section>
@@ -382,6 +376,8 @@ class Component extends DCLogic {
       closeZoom: () => this.close(),
 
       openPortada: () => this.open('assets/campana-portada.webp', 'Portada de campana', 1448 / 1086),
+      openProblemaNo: () => this.open('assets/problema-no.webp', 'Lo que no hacemos', 1448 / 1086),
+      openProblemaSi: () => this.open('assets/problema-si.webp', 'Lo que si somos', 1448 / 1086),
       openP1: piece(1, 'Pilar 1 · Lo imposible', 1536 / 1024),
       openP2: piece(2, 'Pilar 2 · Cultura × Futuro', 1672 / 941),
       openP3: piece(3, 'Pilar 3 · Humanos × IA', 1672 / 941),
