@@ -39,9 +39,9 @@ a:hover{color:#A855F7}
     </sc-if>
   </div>
   <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative">
-    <img src="assets/bubble-3d.png" alt="Burbuja 3D BubbleMesh" style="width:660px;height:660px;object-fit:contain;filter:drop-shadow(0 0 90px rgba(168,85,247,.45))">
+    <div onClick="{{ openPortada }}" role="button" tabIndex="0" style="position:relative;width:760px;height:570px;cursor:zoom-in;border-radius:20px;overflow:hidden;border:1px solid rgba(168,85,247,.28);box-shadow:0 0 90px rgba(168,85,247,.35)"><image-slot id="portada-campana" shape="rect" fit="cover" src="assets/campana-portada.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Portada de campaña — arrastra una imagen"></image-slot></div>
     <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-      <div style="position:absolute;right:112px;bottom:72px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Origen del Imposible</div>
+      <div style="position:absolute;right:112px;bottom:72px;font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Portada de campaña · <span style="color:#A855F7">Ampliar ⤢</span></div>
     </sc-if>
   </div>
 </section>
@@ -172,15 +172,13 @@ a:hover{color:#A855F7}
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
       <div style="flex:1;min-height:0;border:1px solid rgba(168,85,247,.2);border-radius:20px;background:radial-gradient(ellipse 70% 70% at 35% 20%,rgba(124,58,237,.24),transparent 70%),rgba(255,255,255,.03);padding:24px;display:flex;flex-direction:column;gap:16px">
-          <div style="flex:1;min-height:0;display:flex;gap:16px">
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p1-ej1" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 1 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p1-ej2" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 2 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p1-ej3" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 3 — arrastra una imagen"></image-slot></div>
-          </div>
-        
-        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Cuenta Regresiva</div>
-        </sc-if>
+        <div onClick="{{ openP1 }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;cursor:zoom-in"><image-slot id="p1-campana" shape="rect" fit="contain" src="assets/campana-pilar-1.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Lámina de campaña — arrastra una imagen"></image-slot></div>
+        <div style="flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+          <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · La Cuenta Regresiva</div>
+          </sc-if>
+          <div onClick="{{ openP1 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#A855F7;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
+        </div>
       </div>
       <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
         <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
@@ -215,15 +213,13 @@ a:hover{color:#A855F7}
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
       <div style="flex:1;min-height:0;border:1px solid rgba(236,72,153,.22);border-radius:20px;background:radial-gradient(ellipse 70% 70% at 65% 20%,rgba(236,72,153,.2),transparent 70%),rgba(255,255,255,.03);padding:24px;display:flex;flex-direction:column;gap:16px">
-          <div style="flex:1;min-height:0;display:flex;gap:16px">
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p2-ej1" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 1 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p2-ej2" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 2 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p2-ej3" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 3 — arrastra una imagen"></image-slot></div>
-          </div>
-        
-        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Mural que Despierta</div>
-        </sc-if>
+        <div onClick="{{ openP2 }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;cursor:zoom-in"><image-slot id="p2-campana" shape="rect" fit="contain" src="assets/campana-pilar-2.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Lámina de campaña — arrastra una imagen"></image-slot></div>
+        <div style="flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+          <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Mural que Despierta</div>
+          </sc-if>
+          <div onClick="{{ openP2 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#EC4899;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
+        </div>
       </div>
       <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
         <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
@@ -258,15 +254,13 @@ a:hover{color:#A855F7}
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
       <div style="flex:1;min-height:0;border:1px solid rgba(168,85,247,.2);border-radius:20px;background:radial-gradient(ellipse 60% 60% at 50% 35%,rgba(251,191,36,.14),transparent 70%),rgba(255,255,255,.03);padding:24px;display:flex;flex-direction:column;gap:16px">
-          <div style="flex:1;min-height:0;display:flex;gap:16px">
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p3-ej1" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 1 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p3-ej2" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 2 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p3-ej3" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 3 — arrastra una imagen"></image-slot></div>
-          </div>
-        
-        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Manos que Ahora Pueden</div>
-        </sc-if>
+        <div onClick="{{ openP3 }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;cursor:zoom-in"><image-slot id="p3-campana" shape="rect" fit="contain" src="assets/campana-pilar-3.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Lámina de campaña — arrastra una imagen"></image-slot></div>
+        <div style="flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+          <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · Manos que Ahora Pueden</div>
+          </sc-if>
+          <div onClick="{{ openP3 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#A855F7;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
+        </div>
       </div>
       <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
         <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
@@ -301,15 +295,13 @@ a:hover{color:#A855F7}
     </div>
     <div style="display:flex;flex-direction:column;gap:28px;min-height:0">
       <div style="flex:1;min-height:0;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:radial-gradient(ellipse 60% 60% at 50% 60%,rgba(251,191,36,.12),transparent 70%),rgba(255,255,255,.03);padding:24px;display:flex;flex-direction:column;gap:16px">
-          <div style="flex:1;min-height:0;display:flex;gap:16px">
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p4-ej1" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 1 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p4-ej2" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 2 — arrastra una imagen"></image-slot></div>
-            <div style="position:relative;flex:1;min-height:0"><image-slot id="p4-ej3" shape="rect" fit="cover" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Ejemplo 3 — arrastra una imagen"></image-slot></div>
-          </div>
-        
-        <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Desorden que Vale la Pena</div>
-        </sc-if>
+        <div onClick="{{ openP4 }}" role="button" tabIndex="0" style="position:relative;flex:1;min-height:0;cursor:zoom-in"><image-slot id="p4-campana" shape="rect" fit="contain" src="assets/campana-pilar-4.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Lámina de campaña — arrastra una imagen"></image-slot></div>
+        <div style="flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:24px">
+          <sc-if value="{{ pieceNames }}" hint-placeholder-val="{{ true }}">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.55)">Pieza · El Desorden que Vale la Pena</div>
+          </sc-if>
+          <div onClick="{{ openP4 }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#FBBF24;cursor:pointer;white-space:nowrap" style-hover="color:#fff">Ampliar ⤢</div>
+        </div>
       </div>
       <sc-if value="{{ showPrompts }}" hint-placeholder-val="{{ true }}">
         <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px 28px;display:flex;flex-direction:column;gap:10px">
@@ -431,13 +423,59 @@ a:hover{color:#A855F7}
 </section>
 
 </x-import>
+<sc-if value="{{ isZoomed }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeZoom }}" style="position:fixed;inset:0;z-index:9999;background:rgba(6,9,17,.95);display:flex;flex-direction:column;gap:clamp(10px,1.6vw,24px);padding:clamp(14px,3vw,48px);cursor:zoom-out;overflow:hidden">
+    <div style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.7vw,24px);letter-spacing:.18em;text-transform:uppercase;color:#94A3B8">{{ zoomLabel }}</div>
+      <div onClick="{{ closeZoom }}" role="button" tabIndex="0" style="font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.7vw,24px);letter-spacing:.16em;text-transform:uppercase;color:#E2E8F0;cursor:pointer;white-space:nowrap" style-hover="color:#A855F7">Cerrar ✕</div>
+    </div>
+    <div style="flex:1;min-height:0;width:100%;display:flex;overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain">
+      <div onClick="{{ toggleScale }}" role="button" tabIndex="0" aria-label="{{ zoomLabel }}" style="flex:none;margin:auto;background-image:{{ zoomBg }};background-size:contain;background-repeat:no-repeat;background-position:center;aspect-ratio:{{ zoomRatio }};width:{{ zoomWidth }};height:{{ zoomHeight }};max-width:{{ zoomMax }};max-height:{{ zoomMax }};border-radius:8px;cursor:{{ zoomCursor }};transition:width .35s cubic-bezier(.22,1,.36,1)"></div>
+    </div>
+    <div style="flex:none;font-family:'JetBrains Mono',monospace;font-size:clamp(10px,1.4vw,20px);letter-spacing:.1em;color:rgba(148,163,184,.7);text-align:center">{{ zoomHint }}</div>
+  </div>
+</sc-if>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showPrompts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Producción&quot;},&quot;pieceNames&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Producción&quot;}}">
 class Component extends DCLogic {
+  state = { zoomSrc: null, zoomLabel: '', zoomRatio: 1.78, scale: 1 };
+
+  componentDidMount() {
+    this._key = (e) => { if (e.key === 'Escape' && this.state.zoomSrc) this.close(); };
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this._key); }
+
+  open(src, label, ratio) { this.setState({ zoomSrc: src, zoomLabel: label, zoomRatio: ratio, scale: 1 }); }
+  close() { this.setState({ zoomSrc: null, scale: 1 }); }
+
   renderVals() {
+    const piece = (n, label, ratio) => () => this.open('assets/campana-pilar-' + n + '.webp', label, ratio);
     return {
       showPrompts: this.props.showPrompts ?? true,
       pieceNames: this.props.pieceNames ?? true,
+
+      isZoomed: !!this.state.zoomSrc,
+      zoomBg: this.state.zoomSrc ? 'url("' + this.state.zoomSrc + '")' : 'none',
+      zoomRatio: String(this.state.zoomRatio),
+      zoomLabel: this.state.zoomLabel,
+      // Relativo al hueco disponible, no en vh: al 100% la lamina entra
+      // completa en cualquier pantalla; al acercar crece solo a lo ancho.
+      zoomMax: this.state.scale > 1 ? 'none' : '100%',
+      zoomWidth: this.state.scale > 1 ? '240%' : 'auto',
+      zoomHeight: this.state.scale > 1 ? 'auto' : '100%',
+      zoomCursor: this.state.scale > 1 ? 'zoom-out' : 'zoom-in',
+      zoomHint: this.state.scale > 1
+        ? 'Desliza para recorrer la lamina · clic en la imagen para alejar'
+        : 'Clic en la imagen para acercar · Esc o clic fuera para cerrar',
+      toggleScale: (e) => { e.stopPropagation(); this.setState(s => ({ scale: s.scale > 1 ? 1 : 2 })); },
+      closeZoom: () => this.close(),
+
+      openPortada: () => this.open('assets/campana-portada.webp', 'Portada de campana', 1448 / 1086),
+      openP1: piece(1, 'Pilar 1 · Lo imposible', 1536 / 1024),
+      openP2: piece(2, 'Pilar 2 · Cultura × Futuro', 1672 / 941),
+      openP3: piece(3, 'Pilar 3 · Humanos × IA', 1672 / 941),
+      openP4: piece(4, 'Pilar 4 · Detras de lo imposible', 1672 / 941),
     };
   }
 }
