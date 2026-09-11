@@ -86,7 +86,10 @@ a:hover{color:#A855F7}
 
 <section data-label="Bubble, el cómplice" data-screen-label="05" data-speaker-notes="&quot;Y quien propone la locura no somos nosotros. Es Bubble.&quot; &quot;Bubble representa a la IA, pero no la fría, no la amenazante. La curiosa. La que se equivoca. La que te reta a hacer algo ridículo y luego te ayuda a lograrlo.&quot; &quot;Bubble imagina lo imposible. Los humanos lo hacen realidad.&quot;" style="display:flex;background:#0B0F1A;color:#fff;font-family:Inter,sans-serif;overflow:hidden">
   <div style="flex:0 0 45%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(236,72,153,.22),transparent 70%)">
-    <img src="assets/bubble-3d.png" alt="Bubble" style="width:560px;height:560px;object-fit:contain;filter:drop-shadow(0 0 80px rgba(168,85,247,.5))">
+    <div style="position:relative;width:680px;height:680px;display:flex;align-items:center;justify-content:center">
+      <img src="assets/bubble-3d.png" alt="Bubble" style="width:560px;height:560px;object-fit:contain;filter:drop-shadow(0 0 80px rgba(168,85,247,.5))">
+      <div onClick="{{ openSusurra }}" role="button" tabIndex="0" style="position:absolute;right:10px;bottom:24px;width:360px;height:360px;border-radius:9999px;overflow:hidden;cursor:zoom-in;border:3px solid rgba(168,85,247,.55);box-shadow:0 26px 70px rgba(6,9,17,.75),0 0 64px rgba(168,85,247,.45)"><image-slot id="bubble-susurra" shape="rect" fit="cover" src="assets/bubble-susurra.webp" style="position:absolute;inset:0;width:100%;height:100%" placeholder="Bubble susurrando — arrastra una imagen"></image-slot></div>
+    </div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:88px 112px 64px 0">
     <div style="font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#94A3B8">05 · El cómplice</div>
@@ -343,6 +346,7 @@ class Component extends DCLogic {
       openPortada: () => this.open('assets/campana-portada.webp', 'Portada de campana', 1448 / 1086),
       openProblemaNo: () => this.open('assets/problema-no.webp', 'Lo que no hacemos', 1448 / 1086),
       openProblemaSi: () => this.open('assets/problema-si.webp', 'Lo que si somos', 1448 / 1086),
+      openSusurra: () => this.open('assets/bubble-susurra.webp', 'Bubble, el complice', 1),
       openP1: piece(1, 'Pilar 1 · Lo imposible', 1536 / 1024),
       openP2: piece(2, 'Pilar 2 · Cultura × Futuro', 1672 / 941),
       openP3: piece(3, 'Pilar 3 · Humanos × IA', 1672 / 941),
