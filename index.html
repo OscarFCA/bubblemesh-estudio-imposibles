@@ -20,6 +20,172 @@ a{color:#EC4899;text-decoration:none}
 a:hover{color:#A855F7}
 ::selection{background:rgba(168,85,247,.35)}
 </style>
+
+<style>
+/* ------------------------------------------------------------------
+   Modo pagina (<=1024px: movil y tablet en vertical).
+   El deck es un lienzo fijo de 1920x1080 que se escala entero, asi que
+   en un movil de 390px todo queda a escala 0.20 y el cuerpo cae a 5.7px.
+   Por debajo de 1024px se apaga ese escalado y las laminas fluyen como
+   bloques, con la tipografia en px reales. De 1025px para arriba no se
+   aplica nada de esto y el deck sigue siendo el de siempre.
+   ------------------------------------------------------------------ */
+@media (max-width:1024px){
+  html,body{overflow:auto!important;height:auto!important;background:#0B0F1A}
+
+  section[data-label]{
+    width:100%!important;height:auto!important;min-height:0!important;
+    position:relative!important;visibility:visible!important;opacity:1!important;
+    transform:none!important;overflow:hidden!important;
+    padding:52px 22px!important;display:block!important;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+
+  /* Toda rejilla y toda columna del layout pasa a una sola columna. */
+  section[data-label] [style*="grid-template-columns"]{
+    display:block!important;
+  }
+  section[data-label] [style*="grid-template-columns"] > *{margin-top:22px}
+  section[data-label] [style*="flex: 0 0 52%"],
+  section[data-label] [style*="flex: 0 0 45%"]{flex:none!important;width:100%!important;padding:0!important}
+  section[data-label] [style*="flex: 1 1 0%"]{flex:none!important;width:100%!important}
+
+  /* Las medidas de linea pensadas para 1920 aprietan el texto en movil. */
+  section[data-label] [style*="max-width"]{max-width:100%!important}
+  section[data-label] [style*="white-space: nowrap"]{white-space:normal!important}
+
+  /* Escala tipografica. Los inline styles sobreviven en el DOM, asi que
+     se puede reasignar cada tamano por el valor que ya trae. */
+  section[data-label] [style*="font-size: 132px"]{font-size:40px!important;line-height:1.04!important}
+  section[data-label] [style*="font-size: 96px"] {font-size:33px!important;line-height:1.06!important}
+  section[data-label] [style*="font-size: 60px"] {font-size:24px!important}
+  section[data-label] [style*="font-size: 52px"] {font-size:22px!important}
+  section[data-label] [style*="font-size: 44px"] {font-size:21px!important;line-height:1.25!important}
+  section[data-label] [style*="font-size: 40px"] {font-size:20px!important;line-height:1.25!important}
+  section[data-label] [style*="font-size: 38px"] {font-size:19px!important}
+  section[data-label] [style*="font-size: 36px"] {font-size:19px!important}
+  section[data-label] [style*="font-size: 32px"] {font-size:17px!important;line-height:1.5!important}
+  section[data-label] [style*="font-size: 28px"] {font-size:16px!important;line-height:1.55!important}
+  section[data-label] [style*="font-size: 26px"] {font-size:15px!important}
+  section[data-label] [style*="font-size: 24px"] {font-size:13px!important}
+  section[data-label] [style*="font-size: 22px"] {font-size:12px!important}
+
+  /* Cualquier caja con medidas de escenario se vuelve fluida. */
+  section[data-label] [style*="width: 760px"],
+  section[data-label] [style*="width: 660px"]{width:100%!important;height:auto!important;aspect-ratio:4/3}
+  section[data-label] [style*="width: 680px"]{width:100%!important;height:auto!important;aspect-ratio:1}
+  section[data-label] [style*="width: 560px"]{width:64%!important;height:auto!important}
+  section[data-label] [style*="width: 360px"]{width:46%!important;height:auto!important;aspect-ratio:1}
+
+  /* Los huecos de imagen viven en cajas que aqui colapsan: el que manda es
+     el contenedor, y cada uno toma la proporcion real de su archivo. */
+  section[data-label] [style*="position: relative"][style*="flex: 1 1 0%"]{
+    flex:none!important;width:100%!important;min-height:0!important;aspect-ratio:16/9}
+  section[data-label] [style*="position: relative"]:has(#problema-no),
+  section[data-label] [style*="position: relative"]:has(#problema-si){aspect-ratio:4/3}
+  section[data-label] [style*="position: relative"]:has(#p1-campana){aspect-ratio:3/2}
+
+  /* Titulo y bajada dejan de compartir renglon (El elenco). */
+  section[data-label] [style*="justify-content: space-between"][style*="align-items: flex-end"]{
+    display:block!important}
+
+  /* La portada conserva la imagen a sangre: es lo unico que no se apila. */
+  section[data-label="Portada"]{
+    min-height:80vh!important;display:flex!important;flex-direction:column!important;
+    justify-content:flex-end!important;padding:26px 22px 24px!important}
+  section[data-label="Portada"] > [style*="position: absolute"]{
+    position:absolute!important;inset:0!important;width:auto!important;height:auto!important;
+    aspect-ratio:auto!important;margin:0!important}
+  section[data-label="Portada"] #portada-campana{height:100%!important;aspect-ratio:auto!important}
+  section[data-label="Portada"] > [style*="flex: 1 1 0%"]{
+    order:2;align-items:flex-start!important;padding:14px 0 0!important;min-height:0!important}
+  section[data-label] [style*="padding: 44px"],
+  section[data-label] [style*="padding: 40px 36px"],
+  section[data-label] [style*="padding: 40px"]{padding:20px!important}
+  section[data-label] [style*="padding: 24px"]{padding:14px!important}
+
+  /* Espaciados verticales de 1920 divididos para la lamina corta. */
+  section[data-label] [style*="margin-top: 96px"]{margin-top:26px!important}
+  section[data-label] [style*="margin-top: 52px"],
+  section[data-label] [style*="margin-top: 48px"]{margin-top:22px!important}
+  section[data-label] [style*="margin-top: 44px"],
+  section[data-label] [style*="margin-top: 40px"],
+  section[data-label] [style*="margin-top: 36px"],
+  section[data-label] [style*="margin-top: 32px"]{margin-top:18px!important}
+  section[data-label] [style*="margin-top: 28px"],
+  section[data-label] [style*="margin-top: 20px"],
+  section[data-label] [style*="margin-top: 16px"]{margin-top:12px!important}
+  section[data-label] [style*="margin-top: auto"]{margin-top:18px!important}
+  section[data-label] [style*="margin-bottom: auto"]{margin-bottom:0!important}
+  section[data-label] [style*="gap: 64px"],
+  section[data-label] [style*="gap: 56px"],
+  section[data-label] [style*="gap: 40px"],
+  section[data-label] [style*="gap: 32px"]{gap:18px!important}
+  section[data-label] [style*="padding-top: 48px"]{padding-top:20px!important}
+}
+
+/* Tablet en vertical: mismo modo pagina, pero con 820px de ancho la escala
+   de movil se queda corta y las lineas salen larguisimas. */
+@media (min-width:600px) and (max-width:1024px){
+  section[data-label]{padding:76px 56px!important}
+  section[data-label] [style*="font-size: 132px"]{font-size:58px!important}
+  section[data-label] [style*="font-size: 96px"] {font-size:46px!important}
+  section[data-label] [style*="font-size: 60px"] {font-size:32px!important}
+  section[data-label] [style*="font-size: 52px"] {font-size:30px!important}
+  section[data-label] [style*="font-size: 44px"] {font-size:28px!important}
+  section[data-label] [style*="font-size: 40px"] {font-size:26px!important}
+  section[data-label] [style*="font-size: 38px"],
+  section[data-label] [style*="font-size: 36px"] {font-size:24px!important}
+  section[data-label] [style*="font-size: 32px"] {font-size:22px!important}
+  section[data-label] [style*="font-size: 28px"] {font-size:20px!important}
+  section[data-label] [style*="font-size: 26px"] {font-size:19px!important}
+  section[data-label] [style*="font-size: 24px"] {font-size:17px!important}
+  section[data-label] [style*="font-size: 22px"] {font-size:16px!important}
+  /* Con este ancho las tarjetas si caben de dos en dos. */
+  section[data-label] [style*="repeat(4"]{display:grid!important;
+    grid-template-columns:1fr 1fr!important;gap:22px!important}
+  section[data-label] [style*="repeat(4"] > *{margin-top:0}
+  /* Medida de linea: el parrafo largo no debe cruzar la lamina entera. */
+  section[data-label] [style*="font-size: 32px"],
+  section[data-label] [style*="font-size: 28px"]{max-width:62ch!important}
+}
+
+/* El visor fija la altura al hueco disponible y deja que el ancho lo ponga
+   la proporcion; en vertical eso deja la lamina en una franja. Aqui manda
+   el ancho. */
+@media (max-width:1024px){
+  [style*="background-size: contain"][aria-label]{
+    width:100%!important;height:auto!important;max-height:100%!important}
+}
+</style>
+<script>
+/* El escalado del deck vive en el shadow DOM de <deck-stage>, fuera del
+   alcance de la hoja de arriba: hay que meterle su propia regla. */
+(function(){
+  var CSS='@media (max-width:1024px){'+
+    ':host{position:static!important;overflow:visible!important;height:auto!important;background:#0B0F1A}'+
+    '.rail,.rail-resize,.overlay{display:none!important}'+
+    '.stage{position:static!important;overflow:visible!important;width:100%!important;height:auto!important}'+
+    '.canvas{transform:none!important;width:100%!important;height:auto!important;position:static!important}'+
+    /* El componente apila las laminas con ::slotted(*){position:absolute!important};
+       solo otra regla ::slotted puede devolverlas al flujo. */
+    '::slotted(*){position:relative!important;inset:auto!important;width:100%!important;'+
+      'height:auto!important;min-height:0!important;visibility:visible!important;opacity:1!important;'+
+      'transform:none!important;display:block!important;pointer-events:auto!important;'+
+      'filter:none!important;clip-path:none!important}'+
+    '::slotted([data-label="Portada"]){min-height:78vh!important}'+
+    '}';
+  var tries=0;
+  (function put(){
+    var ds=document.querySelector('deck-stage');
+    if(!ds||!ds.shadowRoot){ if(tries++<120) return setTimeout(put,100); return; }
+    if(!ds.shadowRoot.getElementById('bm-flow')){
+      var st=document.createElement('style'); st.id='bm-flow'; st.textContent=CSS;
+      ds.shadowRoot.appendChild(st);
+    }
+  })();
+})();
+</script>
 </helmet>
 <x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
 
